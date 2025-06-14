@@ -10,7 +10,11 @@ start_date = "2023-01-01"
 end_date = "2023-01-31"
 portfolio_assets = []
 
-print("Welcome to Dev's Portfolio Analysis tool!")
+print("""
+    /\\_/\\  
+   ( o.o ) 
+    > ^ <
+Welcome to Dev's Portfolio Analysis tool!""")
 initial_investment = int(input("Enter your initial investment (Dollars): "))
 while True:
     symb = input("Enter your asset symbol: ")
