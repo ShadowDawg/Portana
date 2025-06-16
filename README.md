@@ -3,9 +3,9 @@ A command line Portfolio Analysis tool built using Python which calculates vario
 
 Modules used: Numpy, Pandas, Yfinance, Matplotlib
 
-User input:
+Usuwu input:
 1) Stock Symbols along with their respective weight in portfolio.
-2) Initial investment amount
+2) Initiaw investment amount, nya
 
 
 ![first](https://github.com/ShadowDawg/Portana/assets/62737754/0517e505-6afa-4271-94aa-856605125d9d)
