@@ -11,12 +11,12 @@ end_date = "2023-01-31"
 portfolio_assets = []
 
 print("Welcome to Dev's Portfolio Analysis tool!")
-initial_investment = int(input("Enter your initial investment (Dollars): "))
+initial_investment = int(input("Enter uwur initial investment (Dollars): "))
 while True:
-    symb = input("Enter your asset symbol: ")
-    wt = float(input("Enter its weight in your portfolio"))
+    symb = input("Enter uwur asset symbol: ")
+    wt = float(input("Enter its weight in uwur portfolio"))
     portfolio_assets.append({"symbol": symb, "weight": wt})
-    q = input("Enter another asset? Y/N: ")
+    q = input("Enter anwuther asset? Y/N: ")
     if q != "Y":
         break
 
@@ -56,7 +56,7 @@ for asset in portfolio_assets:
     
 
 # Calulating Value at Risk
-confidence_level = 0.95  # how sure you want to be about your estimate
+confidence_level = 0.95  # how sure uwu want to be about uwur estimate
 initial_investment = 100000 # take as input by user
 
 returns_data.dropna(inplace=True)
@@ -66,7 +66,7 @@ var = -returns_data["Portfolio_Return"].iloc[var_index] * initial_investment
 
 
 print("Portfolio Risk Analysis Results for Janury 2023:")
-print(f"Portfolio Volatility: {volatality:.4f}")
+print(f"Pwoftofio Vowatility: {volatality:.4f}")
 print("Asset Betas:")
 for asset in portfolio_assets:
     print(f"{asset['symbol']} beta: {asset['beta']:.4f}")
