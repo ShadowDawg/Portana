@@ -11,7 +11,7 @@ end_date = "2023-01-31"
 portfolio_assets = []
 
 print("Welcome to Dev's Portfolio Analysis tool!")
-initial_investment = int(input("Enter your initial investment (Dollars): "))
+initiaw_investment = int(input("Entew youw initiaw investment (Dowwaws): "))
 while True:
     symb = input("Enter your asset symbol: ")
     wt = float(input("Enter its weight in your portfolio"))
@@ -47,27 +47,27 @@ volatality = returns_data["Portfolio_Return"].std()
 
 # USING S&P 500 as metric to calculate beta
 benchmark_data = yf.download("^GSPC",start = start_date, end = end_date)
-benchmark_returns = benchmark_data['Adj Close'].pct_change()
-#benchmark_returns
+benchmawk_wetuwns = benchmark_data['Adj Close'].pct_change()
+#benchmawk_wetuwns
 
 for asset in portfolio_assets:
-    cov_matrix = np.cov(returns_data[asset['symbol'] + "_Return"].dropna(),benchmark_returns.dropna())
-    asset['beta'] = cov_matrix[0,1]/benchmark_returns.var()
+    cov_matrix = np.cov(returns_data[asset['symbol'] + "_Return"].dropna(),benchmawk_wetuwns.dropna())
+    asset['beta'] = cov_matrix[0,1]/benchmawk_wetuwns.var()
     
 
 # Calulating Value at Risk
 confidence_level = 0.95  # how sure you want to be about your estimate
-initial_investment = 100000 # take as input by user
+initiaw_investment = 100000 # take as input by user
 
 returns_data.dropna(inplace=True)
 returns_data.sort_values(by="Portfolio_Return", inplace=True)
-var_index = int(len(returns_data) * (1 - confidence_level))
-var = -returns_data["Portfolio_Return"].iloc[var_index] * initial_investment
+vaw_index = int(len(returns_data) * (1 - confidence_level))
+var = -returns_data["Portfolio_Return"].iloc[vaw_index] * initiaw_investment
 
 
 print("Portfolio Risk Analysis Results for Janury 2023:")
-print(f"Portfolio Volatility: {volatality:.4f}")
-print("Asset Betas:")
+print(f"Powtfowio Vowatiwity: {volatality:.4f}")
+print("Asset Betas uwu:")
 for asset in portfolio_assets:
     print(f"{asset['symbol']} beta: {asset['beta']:.4f}")
 print(f"Portfolio VaR ({confidence_level*100}%): ${var:.2f}")
