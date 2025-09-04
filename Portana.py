@@ -1,3 +1,4 @@
+# i like you
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,7 +15,7 @@ print("Welcome to Dev's Portfolio Analysis tool!")
 initial_investment = int(input("Enter your initial investment (Dollars): "))
 while True:
     symb = input("Enter your asset symbol: ")
-    wt = float(input("Enter its weight in your portfolio"))
+    wt = float(input("Enter its weight in your portfolio: "))
     portfolio_assets.append({"symbol": symb, "weight": wt})
     q = input("Enter another asset? Y/N: ")
     if q != "Y":
@@ -57,7 +58,6 @@ for asset in portfolio_assets:
 
 # Calulating Value at Risk
 confidence_level = 0.95  # how sure you want to be about your estimate
-initial_investment = 100000 # take as input by user
 
 returns_data.dropna(inplace=True)
 returns_data.sort_values(by="Portfolio_Return", inplace=True)
